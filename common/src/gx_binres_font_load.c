@@ -77,6 +77,7 @@
 /*  10-31-2023     Ting Zhu                 Initial Version 6.3.0         */
 /*                                                                        */
 /**************************************************************************/
+#ifdef GX_BINARY_RESOURCE_SUPPORT
 UINT _gx_binres_font_load(GX_UBYTE *root_address, UINT font_index, GX_UBYTE *buffer, ULONG *buffer_size)
 {
 UINT                status = GX_SUCCESS;
@@ -136,4 +137,4 @@ UINT                required_size;
 
     return status;
 }
-
+#endif
