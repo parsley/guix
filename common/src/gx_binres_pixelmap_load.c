@@ -66,6 +66,7 @@
 /*  10-31-2023     Ting Zhu                 Initial Version 6.3.0         */
 /*                                                                        */
 /**************************************************************************/
+#ifdef GX_BINARY_RESOURCE_SUPPORT
 UINT _gx_binres_standalone_resource_seek(GX_BINRES_DATA_INFO *info, UINT res_index)
 {
 USHORT type;
@@ -97,6 +98,7 @@ ULONG  count;
 
     return GX_SUCCESS;
 }
+#endif
 
 /**************************************************************************/
 /*                                                                        */
@@ -141,6 +143,7 @@ ULONG  count;
 /*  10-31-2023     Ting Zhu                 Initial Version 6.3.0         */
 /*                                                                        */
 /**************************************************************************/
+#ifdef GX_BINARY_RESOURCE_SUPPORT
 UINT _gx_binres_pixelmap_load(GX_UBYTE *root_address, UINT map_index, GX_PIXELMAP *pixelmap)
 {
 UINT                status = GX_SUCCESS;
@@ -184,4 +187,4 @@ GX_BINRES_DATA_INFO info;
 
     return status;
 }
-
+#endif
